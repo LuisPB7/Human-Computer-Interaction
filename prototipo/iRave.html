@@ -1,0 +1,503 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset = "utf-8">
+		<link rel="stylesheet" href="iRave.css">
+		<title>iRave</title>
+	</head>
+	<body onload="startTime()">
+	<div id = "screen">
+		<div id = "barra"></div>
+		<hr noshade>
+		<div id = "content" class = "panzoom">
+			<div class = "menu" id = "container">
+				<img src = "user.png" alt = "user" id="menu1" class="child_menu">
+				<img src = "festival.png" alt = "festival" id="menu2" class="child_menu">
+				<img src = "map.png" alt = "mapa" id="menu3" class="child_menu">
+				<img src = "sosicon.png" alt = "sos" id="menu4" class="child_menu">
+				<img src = "help.png" alt = "help" id = "menu5">
+			</div>
+			<div class = "menu" id = "Tutorial1">
+				<p class = "tuto">Seja bem-vindo ao festival! Vamos conhecer mais aquilo que tem no pulso, o iRave. Vá clicando na seta abaixo.</p>
+				<img src = "arrow.png" id = "arrow1" class = "arrowTut">
+			</div>
+			<div class = "menu" id = "Tutorial2">
+				<p class = "tuto">O iRave é composto por dois botões físicos(Back e Home). Para mudar de ecrã no iRave, arraste o dedo para cima</p>
+				<img src = "arrow.png" id = "arrow2" class = "arrowTut">
+			</div>
+			<div class = "menu" id = "Tutorial3">
+				<p class = "tuto">No Menu Eu(Cima), pode ver informação relativamente aos seus amigos, bem como consultar a sua agenda</p>
+				<img src = "arrow.png" id = "arrow3" class = "arrowTut">
+			</div>
+			<div class = "menu" id = "Tutorial4">
+				<p class = "tuto">No Menu Mapa(Direita), pode consultar o mapa do recinto, bem como os seus Favoritos</p>
+				<img src = "arrow.png" id = "arrow4" class = "arrowTut">
+			</div>
+			<div class = "menu" id = "Tutorial5">
+				<p class = "tuto">No Menu SOS(Baixo), pode consultar as suas taxas e chamar ajuda médica</p>
+				<img src = "arrow.png" id = "arrow5" class = "arrowTut">
+			</div>
+			<div class = "menu" id = "Tutorial6">
+				<p class = "tuto">No Menu Festival(Esquerda), pode consultar a banda a atuar, atrações, restauração, etc.</p>
+				<img src = "arrow.png" id = "arrow6" class = "arrowTut">
+			</div>
+			<div class = "menu" id = "Tutorial7">
+				<p class = "tuto">Fim do tutorial. Clique em Home e divirta-se!</p>
+			</div>
+			<div class = "menu slideable" id = "screenHealth">
+				<p class = "path">Saúde</p>
+				<img src = "taxas.png" id = "IMGtaxas" style = "display: inline;" class = "menuImage" nextIMG = "IMGSOS" nextTXT = "Chamar SOS" prevIMG = "none" prevTXT = "none">
+				<img src = "sos.png"  id = "IMGSOS" class = "menuImage" nextIMG = "none" nextTXT = "none" prevIMG = "IMGtaxas" prevTXT = "Ver taxas">
+				<h3 class = "option" id = "optionHealth">Ver taxas</h3>
+			</div>
+			<div class = "menu slideable" id = "screenTax">
+				<p class = "path">Saúde -> Taxas</p>
+				<img src = "alcool.png" id = "IMGAlcool" style = "display: inline;" class = "menuImage" nextIMG = "IMGPuls" nextTXT = "Pulsação" prevIMG = "none" prevTXT = "none">
+				<img src = "pulsacao.png" id = "IMGPuls" class = "menuImage" nextIMG = "IMGTensao" nextTXT = "Tensão" prevIMG = "IMGAlcool" prevTXT = "Alcoolémia">
+				<img src = "tensao.png" id = "IMGTensao" class = "menuImage" nextIMG = "none" nextTXT = "none" prevIMG = "IMGPuls" prevTXT = "Pulsação">
+				<h3 class = "option" id = "optionTaxas">Alcoolémia</h3>
+			</div>
+			<div class = "menu" id = "screenTax1a">
+				<p class = "path">Saúde -> Taxas</p>
+				<p id = "generaltax"><b>Alcoolémia:</b><p>
+				<p id = "generalvalue">0,2g/l<p>
+				<img src = "inf.png" id = "AlcoholInfo" width = "30px" height = "30px">
+			</div>
+			<div class = "menu" id = "screenTax1b">
+				<p class = "path">Saúde -> Taxas</p>
+				<p id = "generaltax"><b>Pulsação:</b><p>
+				<p id = "generalvalue">88bpm<p>
+				<img src = "inf.png" id = "PulsInfo" width = "30px" height = "30px">
+			</div>
+			<div class = "menu" id = "screenTax1ba">
+				<p class = "path">Saúde -> Taxas</p>
+				<p id = "generaltax"><b>Pulsação:</b><p><br>
+				<p id = "generalinfo">Valor dentro do aceitável.<br>
+				<br><br>Divirta-se no festival!<br><p>
+			</div>
+			<div class = "menu" id = "screenTax1c">
+				<p class = "path">Saúde -> Taxas</p>
+				<p id = "generaltax"><b>Tensão:</b><p>
+				<p id = "generalvalue">12PA<p>
+				<img src = "inf.png" id = "TensaoInfo" width = "30px" height = "30px">
+			</div>
+			<div class = "menu" id = "screenTax1bb">
+				<p class = "path">Saúde -> Taxas</p>
+				<p id = "generaltax"><b>Tensão:</b><p><br>
+				<p id = "generalinfo">Valor dentro do aceitável.<br>
+				<br><br>Divirta-se no festival!<br><p>
+			</div>
+			<div class = "menu" id = "screenTax1aa">
+				<p class = "path">Saúde -> Taxas</p>
+				<p id = "generaltax"><b>Alcoolémia:</b><p><br>
+				<p id = "generalinfo">Valor no limite do aceitável.<br>
+				<br><br><b>Modere a sua bebida!</b><br><p>
+			</div>
+			<div class = "menu slideable" id = "screenSOS1">
+				<p class = "path">SOS</p>
+				<img src = "alcool1.png" style = "display: inline;" class = "sick menuImage" id = "alcool" nextIMG = "drogas" nextTXT = "Drogas" prevIMG = "none" prevTXT = "none">
+				<img src = "drugs.png" class = "sick menuImage" id = "drogas" nextIMG = "lesao" nextTXT = "Lesão" prevIMG = "alcool" prevTXT = "Álcool">
+				<img src = "lesao.png" class = "sick menuImage" id = "lesao" nextIMG = "indis" nextTXT = "Indisposição" prevIMG = "drogas" prevTXT = "Drogas">
+				<img src = "indis.png" class = "sick menuImage" id = "indis" nextIMG = "tensao" nextTXT = "Tensão" prevIMG = "lesao" prevTXT = "Lesão">
+				<img src = "tensao2.png" class = "sick menuImage" id = "tensao" nextIMG = "outro" nextTXT = "Outro" prevIMG = "indis" prevTXT = "Indisposição">
+				<img src = "other.png" class = "sick menuImage" id = "outro" nextIMG = "none" nextTXT = "none" prevIMG = "tensao" prevTXT = "Tensao">
+				<h3 class = "option" id = "optionSOS">Álcool</h3>
+			</div>
+			<div class = "menu" id = "screenSOS2">
+				<p class = "path">SOS</p>
+				<h4 id = "areyousure">A ajuda será<br> chamada.<br>
+				Pretende confirmar<br> a sua decisão?</h4><br><br>
+				<table id = "yesno">
+					<tr>
+						<td><img src = "yes.png" width = "20px" height = "20px" id = "okHelp"></td>
+						<td><img src = "no.png" width = "20px" height = "20px" id = "cancelHelp"></td>
+					</tr>
+				</table>
+			</div>
+			<div class = "menu" id = "screenSOS3">
+			<p class = "path">SOS</p>
+				<h4 id = "helponway">A ajuda chegará <br>dentro de 5 minutos.<br>
+				<br>Permaneça no seu <br>local actual.</h4><br><br>
+				<input type="text" id="txt" readonly><b></b></input>
+			</div>
+			<div class = "menu" id = "screenME1">
+				<p><b>EU</b></p>
+				<p id = "taxas"><b>Álcool:</b>0.5 g/l<br><br><b>Tensão:</b>12 PA<br><br><b>Pulsação:</b>80 bpm<p><br><br>
+				<img src = "paulo.jpg" alt = "paulo" id = "mePaulo" width = "30px" height = "45px">
+				<table id = "friendsdiary">
+					<tr>
+						<td><button type = "button" id = "friends">Amigos</button></td>
+						<td><button type = "button" id = "diary">Agenda</button></td>
+					</tr>
+				</table>
+			</div>	
+			<div class = "menu" id = "screenME2">
+				<p>EU->Amigos</p>
+				<button type = "button" id = "addFriend">+</button>
+				<table id = "friendoptions">
+					<tr>
+						<td><input type="text" id="abc" class="showable" value="António T." readonly></td>
+						<td><button type = "button" id = "mapAntonio" class="showable">Mapa</button></td>
+						<td><button type = "button" id = "deleteFriend" class="showable">-</button></td>
+					</tr>
+					<tr>
+						<td><input type="text" id="abc" class="showable1" value="Luís B." readonly></td>
+						<td><button type = "button" id = "mapLuis" class="showable1">Mapa</button></td>
+						<td><button type = "button" id = "deleteFriend1" class="showable1">-</button></td>
+					</tr>
+				</table>
+				<button type = "button" id = "mapAllFriends">Mapear todos</button>
+			</div>
+			<div class = "menu" id = "screenME3">
+				<p>EU->Agenda</p>
+				<table id = "diarytable">
+					<tr>
+						<td class = "line1">14:35</td>
+						<td class = "line1"><input type="text" class="tasks" value="Atração" readonly><button type = "button" id = "deleteTask1" style = "float:right;">-</button></td>
+					</tr>
+					<tr>
+						<td class = "line2" >14:45</td>
+						<td class = "line2" ><input type="text" class="tasks" value="Comida" readonly><button type = "button" id = "deleteTask2" style = "float:right;">-</button></td>
+					</tr>
+					<tr>
+						<td class = "line3" >15:00</td>
+						<td class = "line3" ><input type="text" class="tasks" value="Concerto" readonly><button type = "button" id = "deleteTask3" style = "float:right;">-</button></td>
+					</tr>
+					<tr>
+						<td class = "line4">17:00</td>
+						<td class = "line4"><input type="text" class="tasks" value="Concerto" readonly><button type = "button" id = "deleteTask4" style = "float:right;">-</button></td>
+					</tr>
+				</table>
+			</div>
+			<div class = "menu" id = "screenME4">
+				<p id = "addnow">Conecte o iRave ao do seu amigo.<br>
+				<br>A detectar<p><br><br>
+				<input type="text" id="connecting" readonly>
+				<button type = "button" id = "cancelar">Cancelar</button>
+			</div>
+			<div class = "menu slideable" id = "firstScreenMap">
+				<p class = "path">Mapa</p>
+				<img src = "map1.png" id = "verMapa" style = "display: inline;" class = "menuImage" nextIMG = "verFav" nextTXT = "Meus favoritos" prevIMG = "none" prevTXT = "none">
+				<img src = "isFavorite.png"  id = "verFav" class = "menuImage" nextIMG = "none" nextTXT = "none" prevIMG = "verMapa" prevTXT = "Ver mapa">
+				<h3 class = "option">Ver mapa</h3>
+			</div>
+			<div class = "menu" id = "notImplemented">
+				<h4> FUNCIONALIDADE NÃO IMPLEMENTADA </h1>
+			</div>
+			<div class = "menu" id = "screenMAP2">
+				<img src = "favorite.png" class = "child_menu" alt = "FAVORITOS" id = "favorite">
+				<img src = "map1.png" class = "child_menu" alt = "mapa" id = "map1">
+			</div>
+			<div class = "menu" id = "screenMAP">
+				<img src = "mapa.jpg" id = "mapa" class = "panzoom">
+				<img src = "antonio.jpg" class = "icon pessoa small" id = "antonio">
+				<img src = "luis.jpg" class = "icon pessoa small" id = "luis">
+				<img src = "frango.jpg" class = "icon restaurante small" id = "frango">
+				<img src = "paulo.jpg" class = "icon eu pessoa small" id = "paulo">
+				<img src = "palco.png" class = "icon palco small" id = "palco">
+				<img src = "palco.png" class = "icon palco small" id = "palco2">
+				<img src = "slide1.png" class = "icon atracao small" id = "slide">
+				<img src = "choque.png" class = "icon atracao" id = "choque1">
+				<img src = "mac.png" class = "icon restaurante" id = "mcDonalds">
+			</div>
+			<div class = "menu slideable" id = "myScreen">
+				<p class = "path">Eu</p>
+				<img src = "friends.png" style = "display: inline;" class = "menuImage" id = "myFriends" nextIMG = "myAgenda" nextTXT = "Minha agenda" prevIMG = "none" prevTXT = "none">
+				<img src = "agenda.png" class = "menuImage" id = "myAgenda" nextIMG = "none" nextTXT = "none" prevIMG = "myFriends" prevTXT = "Meus amigos">
+				<h3 class = "option">Meus amigos</h3>
+			</div>
+			
+			<div class = "menu slideable" id = "luisScreen">
+				<p class = "path">Luís Borges</p>
+				<img src = "interesse.png" style = "display: inline;" class = "menuImage" id = "showLuis" nextIMG = "removeLuis" nextTXT = "Remover amigo" prevIMG = "none" prevTXT = "none">
+				<img src = "remove.png" class = "menuImage" id = "removeLuis" nextIMG = "none" nextTXT = "none" prevIMG = "showLuis" prevTXT = "Mostrar no mapa">
+				<h3 class = "option">Mostrar no mapa</h3>
+			</div>
+			
+			<div class = "menu slideable" id = "antScreen">
+				<p class = "path">António Tavares</p>
+				<img src = "interesse.png" style = "display: inline;" class = "menuImage" id = "showAnt" nextIMG = "removeAnt" nextTXT = "Remover amigo" prevIMG = "none" prevTXT = "none">
+				<img src = "remove.png" class = "menuImage" id = "removeAnt" nextIMG = "none" nextTXT = "none" prevIMG = "showAnt" prevTXT = "Mostrar no mapa">
+				<h3 class = "option">Mostrar no mapa</h3>
+			</div>
+			
+			
+			<div class = "menu slideable" id = "friendList">
+				<p class = "path">Eu->Amigos</p>
+				<img src = "add.png" style = "display: inline;" class = "menuImage" id = "addFriend1" nextIMG = "mapAllF" nextTXT = "Mapear todos" prevIMG = "none" prevTXT = "none">
+				<img src = "todosMapa.png" class = "menuImage" id = "mapAllF" nextIMG = "ant" nextTXT = "António T." prevIMG = "addFriend1" prevTXT = "Adicionar amigo">
+				<img src = "antonio.jpg" class = "menuImage" id = "ant" nextIMG = "lu" nextTXT = "Luís B." prevIMG = "mapAllF" prevTXT = "Mapear todos">
+				<img src = "luis.jpg" class = "menuImage" id = "lu" nextIMG = "none" nextTXT = "none" prevIMG = "ant" prevTXT = "António T.">
+				<h3 class = "option">Adicionar amigo</h3>
+			</div>
+			
+			<div class = "menu" id = "infoMetallica">
+				<p class = "path">Metallica->Info</p>
+				<br>
+				<p style = "font-size: 10px;">Género: Metal</p>
+				<br>
+				<p style = "font-size: 10px;">Palco: 2</p>
+			</div>
+			
+			<div class = "menu" id = "infoRoach">
+				<p class = "path">Papa Roach->Info</p>
+				<br>
+				<p style = "font-size: 10px;">Género: Rock</p>
+				<br>
+				<p style = "font-size: 10px;">Palco: 2</p>
+			</div>
+			
+			<div class = "menu" id = "infoDay">
+				<p class = "path">Green Day->Info</p>
+				<br>
+				<p style = "font-size: 10px;">Género: Punk Rock</p>
+				<br>
+				<p style = "font-size: 10px;">Palco: 2</p>
+			</div>
+			
+			<div class = "menu" id = "frangoScreen">
+				<p style = "margin-top: 5px;" class = "menuTitle"><b>Casa dos Frangos</b></center></p>
+				<img src = "frango.jpg" alt = "frango" class = "menuPhoto" width = "40px" height = "40px" id = "imgfrango">
+				<img src = "favoriteChicken.png" alt = "favorite" class = "child_menu" id = "makeFavorite" data-on = "no">
+				<div id = "distanceWalking">
+					<p id = "distanceChicken"><b>134 metros</b></p>
+					<img src = "distance.png" alt = "distance" id = "walking">
+				</div>
+				<button type = "button" class = "OpButton" id = "encomendar">Encomendar</button>
+			</div>
+			<div class = "menu slideable" id = "slideScreen">
+				<p class = "path">Slide</p>
+				<img src = "inscrever.png" style = "display: inline;" class = "menuImage" id = "signin" nextIMG = "interesse" nextTXT = "Mostrar no mapa" prevIMG = "none" prevTXT = "none">
+				<img src = "interesse.png" class = "menuImage" id = "interesse" nextIMG = "none" nextTXT = "none" prevIMG = "signin" prevTXT = "Inscrever">
+				<h3 class = "option" id = "slideOption">Inscrever</h3>
+			</div>
+			<div class = "menu slideable" id = "chickenScreen">
+				<p class = "path">Casa dos Frangos</p>
+				<img src = "encomendar.png" style = "display: inline;" class = "menuImage" id = "encomendarFrango" nextIMG = "interesseFrango" nextTXT = "Mostrar no mapa" prevIMG = "none" prevTXT = "none">
+				<img src = "interesse.png" class = "menuImage" id = "interesseFrango" nextIMG = "none" nextTXT = "none" prevIMG = "encomendarFrango" prevTXT = "Encomendar">
+				<h3 class = "option" id = "frangoOption">Encomendar</h3>
+			</div>
+			<div class = "menu slideable" id = "macScreen">
+				<p class = "path">McDonalds</p>
+				<img src = "encomendar.png" style = "display: inline;" class = "menuImage" id = "encomendarMac" nextIMG = "interesseMac" nextTXT = "Mostrar no mapa" prevIMG = "none" prevTXT = "none">
+				<img src = "interesse.png" class = "menuImage" id = "interesseMac" nextIMG = "none" nextTXT = "none" prevIMG = "encomendarMac" prevTXT = "Encomendar">
+				<h3 class = "option" id = "macOption">Encomendar</h3>
+			</div>
+			<div class = "menu slideable" id = "orderFood">
+				<p class = "path">C. Frangos->Encomendar</p>
+				<img src = "frango.png" style = "display: inline;" class = "menuImage" id = "escolherFrango" nextIMG = "escolherSalada" nextTXT = "Salada de Frango(2€)" prevIMG = "none" prevTXT = "none">
+				<img src = "saladafrango.png" class = "menuImage" id = "escolherSalada" nextIMG = "none" nextTXT = "none" prevIMG = "escolherFrango" prevTXT = "Frango(3€)">
+				<h3 class = "option" id = "frangoOption" style = "font-size: 10px;">Frango(3€)</h3>
+			</div>
+			<div class = "menu slideable" id = "orderMac">
+				<p class = "path">McDonalds->Encomendar</p>
+				<img src = "bigmac.png" style = "display: inline;" class = "menuImage" id = "bigmac" nextIMG = "mcchicken" nextTXT = "McChicken(2€)" prevIMG = "none" prevTXT = "none">
+				<img src = "mcchicken.png" class = "menuImage" id = "mcchicken" nextIMG = "none" nextTXT = "none" prevIMG = "bigmac" prevTXT = "Big Mac(3€)">
+				<h3 class = "option" id = "macOption">Big Mac(3€)</h3>
+			</div>
+			<div class = "menu slideable" id = "orderDrink">
+				<p class = "path">Bebida</p>
+				<img src = "icetea.png" style = "display: inline;" class = "menuImage" id = "icetea" nextIMG = "cola" nextTXT = "Coca-Cola(1€)" prevIMG = "none" prevTXT = "none">
+				<img src = "cola.png" class = "menuImage" id = "cola" nextIMG = "none" nextTXT = "none" prevIMG = "icetea" prevTXT = "Ice-Tea(1€)">
+				<h3 class = "option" id = "drinkOption">Ice-Tea(1€)</h3>
+			</div>
+			<div class = "menu slideable" id = "orderSupplies">
+				<p class = "path">Suplementos</p>
+				<img src = "batatasfritas.png" style = "display: inline;" class = "menuImage" id = "chips" nextIMG = "nuggets" nextTXT = "Nuggets(2€)" prevIMG = "none" prevTXT = "none">
+				<img src = "nuggets.png" class = "menuImage" id = "nuggets" nextIMG = "none" nextTXT = "none" prevIMG = "chips" prevTXT = "Batatas fritas(1€)">
+				<h3 class = "option" id = "supplyOption">Batatas fritas(1€)</h3>
+			</div>
+			<div class = "menu slideable" id = "choqueScreen">
+				<p class = "path">Carrinhos de Choque</p>
+				<img src = "inscrever.png" style = "display: inline;" class = "menuImage" id = "signinChoque" nextIMG = "interesseChoque" nextTXT = "Mostrar no mapa" prevIMG = "none" prevTXT = "none">
+				<img src = "interesse.png" class = "menuImage" id = "interesseChoque" nextIMG = "none" nextTXT = "none" prevIMG = "signinChoque" prevTXT = "Inscrever">
+				<img src = "interesse.png" class = "menuImage" id = "interesseChoque" nextIMG = "none" nextTXT = "none" prevIMG = "signinChoque" prevTXT = "Inscrever">
+				<img src = "interesse.png" class = "menuImage" id = "interesse" nextIMG = "none" nextTXT = "none" prevIMG = "signin" prevTXT = "Inscrever">
+				<h3 class = "option" id = "slideOption">Inscrever</h3>
+			</div>
+			
+			<div class = "menu" id = "foodScreen">
+				<p style = "margin-top: 5px;">Comida:</p>
+				<table>
+					<tr><td><input type="checkbox" name="food" value="frango">Frango(5€)</td></tr>
+					<tr><td><input type="checkbox" name="food" value="frango">Salada de Frango(3€)</td></tr>
+				</table>
+				<button type = "button" class = "OpButton" id = "continuar">Continuar</button>
+			</div>
+			<div class = "menu" id = "drinkScreen">
+				<p style = "margin-top: 5px;">Bebida:</p>
+				<table>
+					<tr><td><input type="checkbox" name="drink" value="ice-tea">Ice-Tea(1€)</td></tr>
+					<tr><td><input type="checkbox" name="drink" value="coca-cola">Coca-Cola(1€)</td></tr>
+				</table>
+					<button type = "button" class = "OpButton" id = "continuar2">Continuar</button>			</div>
+			<div class = "menu" id = "supplyScreen">
+				<p style = "margin-top: 5px;">Suplementos:</p>
+				<table>
+					<tr><td><input type="checkbox" name="drink" value="ice-tea">Pacote de batatas(1€)</td></tr>
+					<tr><td><input type="checkbox" name="drink" value="coca-cola">Caixa de Nuggets(2€)</td></tr>
+				</table>
+				<button type = "button" class = "OpButton" id = "confirmar">Confirmar pedido</button>
+			</div>
+			<div class = "menu" id = "confirmScreen">
+				<p style = "margin-top: 5px;"><center><b>O preço será de 6€</b><br><br><b>Tem a certeza que pretende submeter o pedido?</b></center></p>
+				<table class = "okcancelar" cellspacing = "5">
+					<tr>
+						<td><img src = "yes.png" width = "20px" height = "20px" id = "confirmedFood"></td>
+						<td><img src = "no.png" width = "20px" height = "20px" onclick = "principal()"></td>
+					</tr>
+				</table>
+			</div>
+			<div class = "menu" id = "pedidoConfirmado">
+				<p style = "margin-top: 20px;"><center><b>Pedido submetido<br>Poderá levantá-lo às 15:00</b></center></p>
+			</div>
+			<div class = "menu" id = "confirmScreenSlide">
+				<p style = "margin-top: 5px;"><center><b>Tem a certeza que se pretende inscrever?</b></center></p>
+				<table class = "okcancelar" cellspacing = "5">
+					<tr>
+						<td><img src = "yes.png" width = "20px" height = "20px" id = "confirmedSlide"></td>
+						<td><img src = "no.png" width = "20px" height = "20px" onclick = "principal()"></td>
+					</tr>
+				</table>
+			</div>
+			<div class = "menu" id = "confirmScreenChoque">
+				<p style = "margin-top: 5px;"><center><b>Tem a certeza que se pretende inscrever?</b></center></p>
+				<table class = "okcancelar" cellspacing = "5">
+					<tr>
+						<td><img src = "yes.png" width = "20px" height = "20px" id = "confirmedChoque"></td>
+						<td><img src = "no.png" width = "20px" height = "20px" onclick = "principal()"></td>
+					</tr>
+				</table>
+			</div>
+			<div class = "menu" id = "pedidoConfirmadoSlide">
+				<p style = "margin-top: 20px;"><center><b>Pedido submetido<br>Poderá participar às 15:30</b></center></p>
+			</div>
+			<div class = "menu" id = "pedidoConfirmadoChoque">
+				<p style = "margin-top: 20px;"><center><b>Pedido submetido<br>Poderá participar às 16:00</b></center></p>
+			</div>
+			<div class = "menu slideable" id = "screenFEST1">
+				<p class = "path">FESTIVAL</p>
+				<img src = "metalimg.png" style = "display: inline;" class = "menuImage" id = "metalica" nextIMG = "atract" nextTXT = "Atrações" prevIMG = "none" prevTXT = "none">
+				<img src = "atracoes.png" class = "menuImage" id = "atract" nextIMG = "rest" nextTXT = "Restauração" prevIMG = "metalica" prevTXT = "Agora: Metallica">
+				<img src = "restauracao.png" class = "menuImage" id = "rest" nextIMG = "calendar" nextTXT = "Calendário" prevIMG = "atract" prevTXT = "Atrações">
+				<img src = "calendario.png" class = "menuImage" id = "calendar" nextIMG = "none" nextTXT = "none" prevIMG = "rest" prevTXT = "Restauração">
+				<h3 class = "option" id = "optionFEST">Agora: Metallica</h3>
+			</div>	
+			<div class = "menu slideable" id = "screenFEST2">
+				<p class = "path">FESTIVAL->Atrações</p>
+				<img src = "todosMapa.png" id = "todosMapa" style = "display: inline;" class = "menuImage" nextIMG = "slide1" nextTXT = "Slide" prevIMG = "none" prevTXT = "none">
+				<img src = "slide1.png" id = "slide1" class = "menuImage" nextIMG = "choque" nextTXT = "Carrinhos de Choque" prevIMG = "todosMapa" prevTXT = "Mapear todos">
+				<img src = "choque.png" id = "choque" class = "menuImage" nextIMG = "none" nextTXT = "none" prevIMG = "slide1" prevTXT = "Slide">
+				<h3 class = "option" id = "optionAtract" style = "font-size: 10px;">Mapear todos</h3>
+			</div>
+			<div class = "menu slideable" id = "screenREST">
+				<p class = "path">FESTIVAL->Rest.</p>
+				<img src = "todosMapa.png" id = "todosMapaRest" style = "display: inline;" class = "menuImage" nextIMG = "getChicken" nextTXT = "Casa dos Frangos" prevIMG = "none" prevTXT = "none">
+				<img src = "frango.jpg" id = "getChicken" class = "menuImage" nextIMG = "Mac" nextTXT = "McDonalds" prevIMG = "todosMapaRest" prevTXT = "Mapear todos">
+				<img src = "mac.png" id = "Mac" class = "menuImage" nextIMG = "none" nextTXT = "none" prevIMG = "getChicken" prevTXT = "Casa dos Frangos">
+				<h3 class = "option" id = "optionRest" style = "font-size: 10px;">Mapear todos</h3>
+			</div>
+			<div class = "menu" id = "screenFEST3">
+				<p>FESTIVAL->Calendário</p>
+				<input type="text" id="festDay" value="Dia 2" readonly>
+				<img src = "arrow.png" id = "arrowPrev">
+				<img src = "arrow.png" id = "arrowNext">
+				<table id = "calendarytable">
+					<tr>
+						<td>15:00</td>
+						<td><input type="text" class="groups" value="Papa Roach" readonly><img src = "inf.png" id = "informationPapa"></td>
+					</tr>
+					<tr>
+						<td>17:00</td>
+						<td><input type="text" class="groups" value="Green Day" readonly><img src = "inf.png" id = "informationGD"></td>
+					</tr>
+				</table>
+			</div>
+			<div class = "menu slideable" id = "screenCalendario">
+				<p class = "path">Festival->Calendário</p>
+				<img src = "day2.png" style = "display: inline;" id = "dia2" class = "menuImage" nextIMG = "none" nextTXT = "none" prevIMG = "none" prevTXT = "none">
+				<h3 class = "option">Dia 2</h3>
+			</div>
+			<div class = "menu slideable" id = "screenDia">
+				<p class = "path">Dia 2</p>
+				<img src = "pr.png" style = "display: inline;" class = "menuImage" id = "paparroz" nextIMG = "diaverde" nextTXT = "Green Day(17:00)" prevIMG = "none" prevTXT = "none">
+				<img src = "gd.png" class = "menuImage" id = "diaverde" nextIMG = "none" nextTXT = "none" prevIMG = "paparroz" prevTXT = "Papa Roach(15:00)">
+				<h3 class = "option" style = "font-size: 10px;">Papa Roach</h3>
+			</div>
+			<div class = "menu" id = "screenFEST4">
+				<p>FESTIVAL->Restauração</p>
+				<table id = "friendoptions">
+					<tr>
+						<td><input type="text" class="abcd" value="Casa dos Frangos" readonly></td>
+						<td><button type = "button" id = "mapChicken">Mapa</button></td>
+						<td><img src = "inf.png" id = "chickenInfo"></td>
+					</tr>
+				</table>
+				<button type = "button" id = "mapAllBifanas">Mapear todos</button>
+			</div>
+			<div class = "menu slideable" id = "screenFEST5">
+				<p class = "path">Metallica</p>
+				<img src = "inf.png" style = "display: inline;" class = "menuImage" id = "infoMetal" nextIMG = "agenda" nextTXT = "Adicionar à agenda" prevIMG = "none" prevTXT = "none">
+				<img src = "agenda.png" class = "menuImage" id = "agenda" nextIMG = "mapStage" nextTXT = "Mapear palco" prevIMG = "infoMetal" prevTXT = "Informação">
+				<img src = "palco.png" class = "menuImage" id = "mapStage" nextIMG = "none" nextTXT = "none" prevIMG = "agenda" prevTXT = "Adicionar à agenda">
+				<h3 class = "option" id = "optionMetallica" style = "font-size: 10px;">Informação</h3>
+			</div>
+			<div class = "menu slideable" id = "screenPapa">
+				<p class = "path">Papa Roach</p>
+				<img src = "inf.png" style = "display: inline;" class = "menuImage" id = "infoPapa" nextIMG = "agendaPapa" nextTXT = "Adicionar à agenda" prevIMG = "none" prevTXT = "none">
+				<img src = "agenda.png" class = "menuImage" id = "agendaPapa" nextIMG = "mapStagePapa" nextTXT = "Mapear palco" prevIMG = "infoPapa" prevTXT = "Informação">
+				<img src = "palco.png" class = "menuImage" id = "mapStagePapa" nextIMG = "none" nextTXT = "none" prevIMG = "agendaPapa" prevTXT = "Adicionar à agenda">
+				<h3 class = "option" style = "font-size: 10px;">Informação</h3>
+			</div>
+			<div class = "menu slideable" id = "screenGreen">
+				<p class = "path">Green Day</p>
+				<img src = "inf.png" style = "display: inline;" class = "menuImage" id = "infoGreen" nextIMG = "agendaGreen" nextTXT = "Adicionar à agenda" prevIMG = "none" prevTXT = "none">
+				<img src = "agenda.png" class = "menuImage" id = "agendaGreen" nextIMG = "mapStageGreen" nextTXT = "Mapear palco" prevIMG = "infoGreen" prevTXT = "Informação">
+				<img src = "palco.png" class = "menuImage" id = "mapStageGreen" nextIMG = "none" nextTXT = "none" prevIMG = "agendaGreen" prevTXT = "Adicionar à agenda">
+				<h3 class = "option" style = "font-size: 10px;">Informação</h3>
+			</div>
+			<div class = "menu" id = "metallicaAdded">
+				<h4 style = "position: relative; text-align: center; top: 15px;">Metallica adicionado <br>com sucesso à <br>agenda!</h4>
+			</div>
+			<div class = "menu" id = "PapaAdded">
+				<h4 style = "position: relative; text-align: center; top: 15px;">Papa Roach adicionado <br>com sucesso à <br>agenda!</h4>
+			</div>
+			<div class = "menu" id = "GreenAdded">
+				<h4 style = "position: relative; text-align: center; top: 15px;">Green Day adicionado <br>com sucesso à <br>agenda!</h4>
+			</div>
+			
+			<div class = "menu" id = "screenFEST6">
+				<p>FESTIVAL->Informação</p>
+				<input type="text" class="bandNames" value="Papa Roach" readonly>
+				<img src = "pr.png" class = "bandImages">
+				<button type = "button" id="b2" class="addBand">Adicionar a Agenda</button>
+				<button type = "button" id="b5" class="added"><i>Adicionado</i></button>
+				<button type = "button" id="mb2" class="mapBand">Mapa</button>
+				<input type="text" class="bandStyle" value="Género: Rock" readonly>
+				<input type="text" class="bandPlace" value="Palco: 1" readonly>
+			</div>
+			<div class = "menu" id = "screenFEST7">
+				<p>FESTIVAL->Informação</p>
+				<input type="text" class="bandNames" value="Green Day" readonly>
+				<img src = "gd.png" class = "bandImages">
+				<button type = "button" id="b3" class="addBand">Adicionar a Agenda</button>
+				<button type = "button" id="b6" class="added"><i>Adicionado</i></button>
+				<button type = "button" id="mb3" class="mapBand">Mapa</button>
+				<input type="text" class="bandStyle" value="Género: Punk" readonly>
+				<input type="text" class="bandPlace" value="Palco: 3" readonly>
+			</div>
+			</div>
+		
+		</div>
+	</div>
+	<div id = "arrows">
+		<img src = "slide-left.png" class = "arrow" id = "slide-left">
+		<img src = "slide-right.png" class = "arrow" id = "slide-right">
+	</div>
+	<div id = "buttons">
+		<img src = "back.png" class = "botao" id = "back">
+		<img src = "home.png" class = "botao" id = "home">
+	</div>
+	<script src = "iRave.js"></script>
+	</body>
+</html>

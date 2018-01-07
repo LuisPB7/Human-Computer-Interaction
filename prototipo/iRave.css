@@ -1,0 +1,898 @@
+body{
+	font-family: sans-serif;
+	font-size: 10px;
+	float: left;
+}
+
+td{
+	font-size: 5px;
+}
+
+input{
+	height: 5px;
+	background-color: transparent;
+}
+
+#slide-left{
+	transform: rotate(90deg);
+	top: 35px;
+	position: absolute;
+	left: 100px;
+}
+
+#slide-right{
+	transform: rotate(90deg);
+	top: 75px;
+	position: absolute;
+	left: 100px;
+}
+
+button{
+	display: block;
+	font-size: 5px;
+	margin: 0 auto;
+}
+
+#ajuda{
+	display: block;
+	font-size: 5px;
+	margin: 0 auto;
+	position: absolute;
+	top: 95px;
+	left: 40px;
+}
+
+#yesno{
+	position: absolute;
+	margin: 0 auto;
+	top: 83px;
+	left: 35px;
+}
+
+#problem{
+	position: absolute;
+	margin: 0 auto;
+	top: 40px;
+	left: 20px;
+}
+
+#areyousure{
+	position: absolute;
+	margin: 0 auto;
+	top: 30px;
+	left: 15px;
+}
+
+#helponway{
+	position: absolute;
+	margin: 0 auto;
+	top: 35px;
+	left: 10px;
+}
+
+#numberbig{
+	position: absolute;
+	font-size: 14px;
+	margin: 0 auto;
+	width:20px;
+	height:20px;
+	top: 55px;
+	left: 40px;
+	border: none;
+}
+
+#generalvalue{
+	position: absolute;
+	font-size: 12pt;
+	margin: 0 auto;
+	top: 40pt;
+	left: 27pt;
+	border: none;
+}
+
+#generaltax{
+	position: absolute;
+	font-size: 8pt;
+	top: 27pt;
+	left: 7pt;
+}
+
+#generalinfo{
+	position: absolute;
+	overflow: auto;
+	font-size: 8.3px;
+	top: 45pt;
+	left: 7pt;
+}
+
+#AlcoholInfo{
+	position: absolute;
+	text-align: center;
+	margin: 0 auto;
+	top: 60pt;
+	left: 30pt;
+}
+
+#AlcoholInfo:hover{
+	cursor: pointer;
+}
+
+#PulsInfo{
+	position: absolute;
+	text-align: center;
+	margin: 0 auto;
+	top: 60pt;
+	left: 30pt;
+}
+
+#PulsInfo:hover{
+	cursor: pointer;
+}
+
+#TensaoInfo{
+	position: absolute;
+	text-align: center;
+	margin: 0 auto;
+	top: 60pt;
+	left: 30pt;
+}
+
+#TensaoInfo:hover{
+	cursor: pointer;
+}
+
+.path{
+	margin: 0;
+	font-size: 8px;
+}
+
+#descriptionb{
+	position: absolute;
+	text-align: center;
+	margin: 0 auto;
+	top: 65pt;
+	left: 30pt;
+}
+
+#taxmeasure{
+	position: absolute;
+	margin: 0 auto;
+	top: 33pt;
+	left: 30pt;
+}
+
+#sosgo{
+	position: absolute;
+	margin: 0 auto;
+	top: 53pt;
+	left: 30pt;
+}
+
+#alcoholgo{
+	position: absolute;
+	margin: 0 auto;
+	top: 30pt;
+	left: 30pt;
+}
+
+#pulsego{
+	position: absolute;
+	margin: 0 auto;
+	top: 45pt;
+	left: 30pt;
+}
+
+#tensiongo{
+	position: absolute;
+	margin: 0 auto;
+	top: 60pt;
+	left: 30pt;
+}
+
+#txt{
+	position: absolute;
+	font-size: 14px;
+	margin: 0 auto;
+	width:15px;
+	height:15px;
+	top: 70px;
+	left: 50px;
+	border: none;
+	padding: none;
+	background-color: transparent;
+}
+
+#addnow{
+	text-align: center;
+	font-size: 10px;
+}
+
+#connecting{
+	position: absolute;
+	font-size: 14px;
+	margin: 0 auto;
+	width:20px;
+	height:20px;
+	top: 65px;
+	left: 85px;
+	border: none;
+}
+
+#cancelar{
+	position: absolute;
+	margin: 0 auto;
+	top: 90px;
+	left: 42px;	
+}
+
+#friendsdiary{
+	position: absolute;
+	margin: 0 auto;
+	top: 85px;
+	left: 22px;
+}
+
+#friendoptions{
+	position: absolute;
+	margin: 0 auto;
+	top: 45px;
+	left: 15px;
+}
+
+#addFriend{
+	position: absolute;
+	margin: 0 auto;
+	top: 30px;
+	left: 90px;
+}
+
+#mapAllFriends{
+	position: absolute;
+	margin: 0 auto;
+	top: 90px;
+	left: 35px;
+}
+
+#abc{
+	font-size: 8px;
+	width:37px;
+	height:10px;
+	border: none;
+}
+
+#mapAllBifanas{
+	position: absolute;
+	margin: 0 auto;
+	top: 90px;
+	left: 35px;
+}
+
+.abc{
+	font-size: 8px;
+	width:37px;
+	height:10px;
+	border: none;
+	background-color: transparent;
+}
+
+.abcd{
+	position: absolute;
+	left: -5px;
+	font-size: 5px;
+	width:42px;
+	height:10px;
+	border: none;
+}
+
+
+.botao{
+	height: 50px;
+	width: 50px;
+}
+.botao:hover{
+	cursor: pointer;
+}
+
+.menu{
+	display: none;
+}
+
+
+hr{
+	border-color: black;
+	margin: 0;
+	border-width: 0.5px;
+}
+
+p{
+	font-size: 5px;
+	margin: 0;
+}
+
+#barra{
+	font-size: 10px;
+	margin: 0;
+	padding: 0;
+}
+
+#screen{
+	width:101.82334px;
+	height:101.82334px;
+	border: 1px solid black;
+	background-image: url("festival.jpg");
+	background-size: 200px;
+	margin: 0;
+}
+
+#container{
+	position: absolute;
+	/*background:url("bola.png") center no-repeat;*/
+	background-size:90px;
+	left:10px;
+	top: 20px;
+	width:101.82334px;
+	height: 90px;
+	/*transform: rotate(45deg);*/
+}
+
+#content{
+	width:101.82334px;
+	height: 89.5px;
+	/*overflow: auto;*/
+}
+
+#diarytable{
+	border: solid black;
+	border-collapse: collapse;
+	width:102px;	
+	height:68px;
+}
+
+#diarytable td{
+	border: solid black;
+}
+
+#screenMAP{
+	width:101.82334px;
+	height: 89.5px;
+}
+
+.tasks{
+	font-size: 7px;
+	width:30px;
+	height:10px;
+	border: none;
+}
+
+.child_menu:hover{
+	cursor: pointer;
+}
+
+.child_menu{
+	height:35%;
+	width:35%;
+}
+
+#menu1{
+	position: absolute;
+	top: 2px;
+	left: 33px;
+}
+
+#menu2{
+	position: absolute;
+	top: 27px;
+	left: 3px;
+}
+
+#menu3{
+	position: absolute;
+	top: 27px;
+	left: 65px;
+}
+
+#menu4{
+	position: absolute;
+	top: 57px;
+	left: 33px;
+}
+
+#quest{
+	display: table;
+	border: 0.5px solid black;
+	border-collapse: collapse;
+	width: 101.82334px;
+	height: 40px;
+	position: absolute;
+	top: 50px;
+	background-color: transparent;
+}
+
+#quest td{
+	border: 0.5px solid black;
+	text-align: center;
+}
+
+#mapa{
+	width:101.82334px;
+	height: 89.5px;
+	z-index: -1;
+	opacity: 0.75;
+}
+
+#frango{
+	position: absolute;
+	top: 30px;
+	left: 50px;
+}
+
+#paulo{
+	position: absolute;
+	top: 64px;
+	left: 50px;
+}
+
+#luis{
+	position: absolute;
+	top: 30px;
+	left: 60px;
+}
+
+#antonio{
+	position: absolute;
+	top: 30px;
+	left: 80px;
+}
+
+#palco{
+	position: absolute;
+	left: 20px;
+	top: 55px;
+}
+
+#palco2{
+	position: absolute;
+	left: 90px;
+	top: 35px;
+}
+
+#slide{
+	position: absolute;
+	left: 44px;
+	top: 98px;
+}
+
+.sick{
+	cursor: pointer;
+}
+
+.icon{
+	width: 7px;
+	height: 10px;
+	cursor: pointer;
+}
+
+.friendPhoto{
+	position: absolute;
+	top: 40px;
+	left: 45px;
+}
+
+.photoName{
+	position: absolute;
+	top: 75px;
+	left: 45px;
+}
+
+.mapremove{
+	display: table;
+	position: absolute;
+	margin: 0 auto;
+	top: 90px;
+	left: 10px;
+}
+
+.friendMap{
+	padding: 0;
+	
+}
+
+.removeFriend{
+	padding: 0;
+}
+
+.OpButton{
+	position: absolute;
+	top: 90px;
+	left: 40px;
+}
+
+.menuTitle{
+	text-align: center;
+}
+
+.menuPhoto{
+	position: absolute;
+	top: 43px;
+	left: 40px;
+}
+
+.okcancelar{
+	display: table;
+	position: absolute;
+	margin: 0 auto;
+	top: 80px;
+	left: 30px;
+}
+
+#backMainMenu{
+	position: absolute;
+	top: 85px;
+	left: 25px;
+}
+
+#mcDonalds{
+	position: absolute;
+	top: 90px;
+	left: 90px;
+}
+
+#atracoesPaulo{
+	position: absolute;
+	margin: 0 auto;
+	top: 70px;
+	left: 15px;
+	height:15px;
+	width:42px;
+	font-size: 6px;
+}
+
+#restauracao{
+	position: absolute;
+	margin: 0 auto;
+	top: 70px;
+	left: 62px;
+	height:15px;
+	width:42px;
+	font-size: 6px;
+	padding-left: 2px;
+}
+
+#festDay{
+	position: absolute;
+	font-size: 6px;
+	margin: 0 auto;
+	width:20px;
+	height:20px;
+	text-align: center;
+	top: 40px;
+	left: 47px;
+	border: none;
+}
+
+#arrowNext{
+	position: absolute;
+	height: 8px;
+	width: 8px;
+	top: 47px;
+	left: 66px;
+}
+
+#arrowPrev{
+	position: absolute;
+	height: 8px;
+	width: 8px;
+	top: 47px;
+	left: 40px;
+	transform: rotate(180deg);
+}
+
+#calendario{
+	position: absolute;
+	margin: 0 auto;
+	top: 90px;
+	left: 38.5px;
+	height:15px;
+	width:42px;
+	font-size: 6px;
+	padding-left: 4.5px;
+}
+
+#information{
+	position: absolute;
+	height: 8px;
+	width: 8px;
+	top: 26px;
+	left: 70px;
+}
+
+#informationPapa{
+	position: absolute;
+	height: 9px;
+	width: 9px;
+	left: 80px;
+	top: 10px;
+}
+
+#informationGD{
+	position: absolute;
+	height: 9px;
+	width: 9px;
+	left: 80px;
+	top: 37px;
+}
+
+#slideInfo{
+	position: absolute;
+	height: 12px;
+	width: 12px;
+	left: 27px;
+	top: 4px;
+}
+
+#chickenInfo{
+	position: absolute;
+	height: 12px;
+	width: 12px;
+	left: 27px;
+	top: 4px;
+}
+
+#calendarytable{
+	position: absolute;
+	border: solid black;
+	border-collapse: collapse;
+	width:102px;	
+	height:55px;
+	top: 57px;
+}
+
+.groups{
+	font-size: 7px;
+	width:50px;
+	height:10px;
+	border: none;
+	padding-left: 60px;
+	padding: 5px 16px;
+}
+
+.bandNames{
+	position: absolute;
+	left: 15px;
+	font-size: 9px;
+	margin: 0 auto;
+	width:55px;
+	height:20px;
+	border: none;
+}
+
+.bandImages{
+	position: absolute;
+	left: 15px;
+	top: 65px;
+	margin: 0 auto;
+	width: 50px;
+	height: 40px;
+	border: none;
+}
+
+.bandStyle{
+	position: absolute;
+	font-size: 6px;
+	left: 70px;
+	top: 65px;
+	margin: 0 auto;
+	width: 40px;
+	height: 15px;
+	border: none;
+}
+
+.bandPlace{
+	position: absolute;
+	font-size: 6px;
+	left: 70px;
+	top: 80px;
+	margin: 0 auto;
+	width: 40px;
+	height: 15px;
+	border: none;
+}
+
+.addBand{
+	position: absolute;
+	left: 68px;
+	top: 45px;
+	width: 40px;
+	height: 17px;
+}
+
+.added{
+	position: absolute;
+	left: 68px;
+	top: 45px;
+	width: 40px;
+	height: 17px;
+	border: none;
+}
+
+.mapBand{
+	position: absolute;
+	font-size: 4px;
+	left: 93px;
+	top: 84px;
+	width: 15px;
+	height: 10px;
+	content: 0;
+	padding: 0;
+	z-index: 1;
+}
+
+#mapAllAtractions{
+	position: absolute;
+	margin: 0 auto;
+	top: 90px;
+	left: 35px;
+}
+
+#mePaulo{
+	position: absolute;
+	left: 70px;
+	top: 30px;
+}
+
+#mapChicken{
+	position: absolute;
+	left: 55px;
+}
+
+#chickenInfo{
+	position: absolute;
+	left: 40px;
+}
+
+#favorite{
+	position: absolute;
+	left: 65px;
+	top: 45px;
+	width: 40px;
+	height: 40px;
+}
+
+#map1{
+	position: absolute;
+	left: 10px;
+	top: 42px;
+	width: 45px;
+	height: 45px;
+}
+
+#imgfrango{
+	position: absolute;
+	top: 43px;
+	left: 20px;
+}
+
+#makeFavorite{
+	position: absolute;
+	top: 40px;
+	left: 85px;
+	width: 25px;
+	height: 25px;
+}
+
+#walking{
+	position: absolute;
+	width: 5px;
+	height: 10px;
+	top: 72px;
+	left: 72px;
+}
+
+#distanceChicken{
+	position: absolute;
+	top: 75px;
+	left: 80px;
+}
+
+#calcDistance{
+	position: absolute;
+	top: 72px;
+	left: 72px;
+}
+
+#taxas{
+	font-size: 6px;
+	position: absolute;
+	top: 40px;
+}
+
+
+#mapItself{
+	transform: scale(1.5,1.5);
+	/*position: relative;*/
+}
+
+
+.arrow{
+	height: 20px;
+	width: 50px;
+}
+.arrow:hover{
+	cursor: pointer;
+}
+
+.option{
+	position: relative;
+	/*left: 27px;*/
+	top: 50px;
+	text-align: center;
+
+}
+
+#choque1{
+	position: absolute;
+	top: 70px;
+	left: 65px;
+	width: 15px;
+	height: 15px;
+}
+
+#choque{
+	position: absolute;
+	left: 30px;
+	top:40px;
+	width: 60px;
+	height: 60px;
+}
+
+#menu5{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	top: 35px;
+	left: 40px;
+}
+
+#menu5:hover{
+	cursor: pointer;
+}
+
+.arrowTut{
+	position: absolute;
+	width: 40px;
+	height: 30px;
+	top: 85px;
+	left: 40px;
+}
+
+.arrowTut:hover{
+	cursor: pointer;
+}
+
+#lu{
+	left: 42px;
+	width: 35px;
+}
+
+#ant{
+	left: 42px;
+	width: 35px;
+}
+
+.tuto{
+	font-size: 10px;
+	text-align: center;
+}
+
+.menuImage{
+	display: none;
+	position: absolute;
+	left: 35px;
+	top:35px;
+	width: 50px;
+	height: 50px;
+}
+
+.menuImage:hover{
+	cursor: pointer;
+}
